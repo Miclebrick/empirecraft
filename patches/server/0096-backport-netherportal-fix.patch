@@ -1,0 +1,24 @@
+From 46f37a96d35bd9f55dc3c0fef7fa506d276c1376 Mon Sep 17 00:00:00 2001
+From: Aikar <aikar@aikar.co>
+Date: Mon, 7 Aug 2017 23:16:22 -0400
+Subject: [PATCH] backport netherportal fix
+
+---
+ src/main/java/net/minecraft/server/Entity.java | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/main/java/net/minecraft/server/Entity.java b/src/main/java/net/minecraft/server/Entity.java
+index 6621d1284d..1dda705489 100644
+--- a/src/main/java/net/minecraft/server/Entity.java
++++ b/src/main/java/net/minecraft/server/Entity.java
+@@ -2412,6 +2412,7 @@ public abstract class Entity implements ICommandListener {
+             event.useTravelAgent(useTravelAgent);
+             event.getEntity().getServer().getPluginManager().callEvent(event);
+             if (event.isCancelled() || event.getTo() == null || event.getTo().getWorld() == null || !this.isAlive()) {
++                agent.setCanCreatePortal(oldCanCreate); // Paper
+                 return null;
+             }
+             exit = event.useTravelAgent() ? event.getPortalTravelAgent().findOrCreate(event.getTo()) : event.getTo();
+-- 
+2.13.0
+
