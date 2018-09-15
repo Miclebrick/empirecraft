@@ -1,3 +1,6 @@
+# IStarThings
+I solemnly swear not to spam star any more repos for the rest of my life.
+
 # EmpireCraft #
 ## What ##
 EmpireCraft is a fork of Spigot used by the [Empire Minecraft](http://ref.emc.gs/Aikar?gam=EmpireCraft) Server.
