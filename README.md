@@ -1,5 +1,7 @@
-# IStarThings
+# IStarRepos
 I solemnly swear not to spam star any more repos for the rest of my life.
+
+Additionally, I solemnly swear to use PG usernames on GitHub.
 
 # EmpireCraft #
 ## What ##
